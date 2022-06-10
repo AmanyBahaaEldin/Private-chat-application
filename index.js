@@ -21,7 +21,7 @@ io.on("connection", (socket) => {
   socket.on("loginnedUser", (user) => {
     socket.broadcast.emit("new-user", { name: user, id: socket.id });
     io.to(socket.id).emit("connected-users", users);
-    users.push({ id: socket.id , name: user });
+    users.push({ id: socket.id , name: user});
     console.log(users);
   });
 
@@ -31,7 +31,7 @@ io.on("connection", (socket) => {
     console.log(message);
     console.log(message.msg);
     console.log(message.userID);
-    socket.to(message.userID).emit("new-message", message);
+    socket.to(message.userID).emit("new-message", message.msg);
   });
 });
 
