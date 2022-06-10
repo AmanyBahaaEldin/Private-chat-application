@@ -13,8 +13,9 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.App {
+  /* background-color: #282c34; */
+  background-image: url("../public/background.jpg");
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,6 +29,9 @@
   color: #61dafb;
 }
 
+.loginDiv{
+  background-color: rgba(248, 248, 124, 0.671);
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

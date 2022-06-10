@@ -52,7 +52,8 @@ function UsersTab(props) {
             <Tab.Content >
               <Tab.Pane eventKey={userIndex}  >
                 <span>...</span>
-                <ChatBubble messages={recievedMessages} newMessage={message} />
+                <ChatBubble messages={recievedMessages} newMessage={message} 
+                style ={{outerHeight:"100%"}}/>
                 <form onSubmit={handleSubmit}>
                   <div>
                     <input
