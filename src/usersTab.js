@@ -1,6 +1,6 @@
 import { Tab } from "react-bootstrap";
 import { Row, Col, Nav } from "react-bootstrap";
-import ChatBubble from "react-chat-bubble";
+import ChatBubble from "./ChatBubble";
 import { useState, useEffect , React } from "react";
 
 function UsersTab(props) {
