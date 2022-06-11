@@ -34,7 +34,7 @@ function Login() {
           </div>
         </form>
       )}
-      {loggedIn && <UsersTab socket={socket} style={{innerHeight:"100%"}}/>}
+      {loggedIn && <UsersTab socket={socket} name ={userName} style={{innerHeight:"100%"}}/>}
     </div>
   );
 }

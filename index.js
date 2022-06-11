@@ -13,10 +13,7 @@ const io = new Server(server, {
 });
 
 io.on("connection", (socket) => {
-  // io.to(socket.id).emit("id",socket.id);
   console.log("a user connected", socket.id);
-
-  // users.push(socket.id);
 
   socket.on("loginnedUser", (user) => {
     socket.broadcast.emit("new-user", { name: user, id: socket.id });

@@ -4,6 +4,7 @@ import ChatBubble from "./ChatBubble";
 import { useState, useEffect, React } from "react";
 
 function UsersTab(props) {
+  const name = props.name;
   const [message, setMessage] = useState({ type: 0, text: "" });
   // const [recievedMessages, setrecievedMessages] = useState([]);
   const [recievedMessages, setrecievedMessages] = useState([
@@ -81,7 +82,8 @@ function UsersTab(props) {
         onSelect={(index) => setUserIndex(index)}
       >
         <Row style={{minHeight:"60vh"}} >
-          <Col sm={3} className="ml-1">
+        {users.length===0&&<span className="text-center mt-5" style={{color:"black" }}>Welcome {name} .. you are the first connected user</span>}
+          <Col sm={3}>
             <Nav variant="pills" className="flex-column">
               <Nav.Item style={{borderBottomColor:"rgba(248, 248, 124, 0.671)"}}>
                 {users.length !== 0 &&
@@ -96,9 +98,11 @@ function UsersTab(props) {
             </Nav>
           </Col>
           <Col sm={9} >
+          
             <Tab.Content>
               <Tab.Pane eventKey={userIndex}>
                 <div style={{backgroundColor:"rgb(83, 84, 100)", borderRadius:"5vh"}}>
+                
                 {users.length!==0&&<span >{users[userIndex].name}</span>}
                 </div>
                 
