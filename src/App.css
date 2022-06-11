@@ -42,10 +42,10 @@
 }
 
 .nav-item a{
-  color: white;
+  color: gold;
 }
 
-.nav-item a:visited{
-  color: gold;
-  background-color: azure;
+.nav-item a:hover{
+  color: rgb(197, 183, 105);
+  cursor: pointer;
 }

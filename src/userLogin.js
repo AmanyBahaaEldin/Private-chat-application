@@ -17,7 +17,7 @@ function Login() {
   };
 
   return (
-    <div className="loginDiv" style={{borderRadius:"5%", minHeight:"60vh" , minWidth:"80%" , alignItems:"center"}}>
+    <div className="loginDiv" style={{borderRadius:"5%", minHeight:"60vh" , minWidth:"70%" , alignItems:"center"}}>
       {!loggedIn && (
         <form onSubmit={handleSubmit}>
           <div style={{marginTop:"15%" , marginLeft:"5%" , marginRight:"5%"}}>
