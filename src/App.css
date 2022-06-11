@@ -38,5 +38,14 @@
   }
   to {
     transform: rotate(360deg);
-  }
+  } 
+}
+
+.nav-item a{
+  color: white;
+}
+
+.nav-item a:visited{
+  color: gold;
+  background-color: azure;
 }

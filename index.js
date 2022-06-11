@@ -31,7 +31,7 @@ io.on("connection", (socket) => {
     console.log(message);
     console.log(message.msg);
     console.log(message.userID);
-    socket.to(message.userID).emit("new-message", message.msg);
+    socket.to(message.userID).emit("new-message", {userID:socket.id, msg:message.msg});
   });
 });
 
